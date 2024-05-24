@@ -3,6 +3,7 @@
 langchain
 langchain-community
 langchain-openai.embeddings.azure
+angchain_openai
 langgraph
 pandas
 PyMuPDF
