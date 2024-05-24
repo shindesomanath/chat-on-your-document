@@ -37,26 +37,16 @@ llm = AzureChatOpenAI(
     azure_deployment='chat'
 )
 def extract_text_from_pdf(pdf_path,chunk_size=800,chunk_overlap=100):
-    #loader = UnstructuredPDFLoader(pdf_path,mode='elements', strategy='fast')
-
     loader = PyMuPDFLoader(pdf_path)
 
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-    # text_splitter = CharacterTextSplitter(
-    #     separator="\&",
-    #     chunk_size=1000,
-    #     chunk_overlap=200,
-    #     length_function=len,
-    #     is_separator_regex=False,
-    # )
-    #doc = text_splitter.create_documents(documents)
     doc = text_splitter.split_documents(documents)
     return doc
 
 
 
-pdf_path = '/Users/HALCYON007/Downloads/Error_codes (1).pdf'
+pdf_path = 'Error_codes.pdf'
 
 # Extract text from the PDF
 
