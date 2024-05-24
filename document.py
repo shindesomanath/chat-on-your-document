@@ -1,6 +1,4 @@
-import re
-import fitz  # PyMuPDF
-import nltk
+
 
 import streamlit as st
 import functools, operator, requests, os, json
@@ -9,7 +7,7 @@ from langchain.agents import AgentExecutor, create_openai_tools_agent
 from langchain_openai import AzureOpenAI, AzureOpenAIEmbeddings
 
 from langchain_community.embeddings import openai
-from langchain_community.document_loaders import PyPDFLoader
+
 from langchain_community.vectorstores import Chroma, FAISS
 from langchain_core.messages import BaseMessage, HumanMessage
 from langchain.output_parsers.openai_functions import JsonOutputFunctionsParser
