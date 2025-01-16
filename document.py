@@ -24,16 +24,16 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 openai.api_type = "azure"
 os.environ["OPENAI_API_TYPE"] = "azure"
-os.environ["OPENAI_API_KEY"] = "91a2c0eb89e24d8faa9c8075b63be35a"
-os.environ["AZURE_OPENAI_ENDPOINT"] = "https://cog-ovavoxv55nlby.openai.azure.com/"
-os.environ["OPENAI_API_VERSION"] = "2024-02-15-preview"
+os.environ["OPENAI_API_KEY"] = "api_key"
+os.environ["AZURE_OPENAI_ENDPOINT"] = "end_point"
+os.environ["OPENAI_API_VERSION"] = "version"
 
 llm = AzureChatOpenAI(
     model= 'gpt-3.5-turbo',
     temperature=0.1,
-    api_version='2024-02-15-preview',
-    api_key='91a2c0eb89e24d8faa9c8075b63be35a',
-    azure_endpoint='https://cog-ovavoxv55nlby.openai.azure.com/',
+    api_version=api version,
+    api_key=apikey,
+    azure_endpoint=azure_endpoit',
     azure_deployment='chat'
 )
 def extract_text_from_pdf(pdf_path,chunk_size=800,chunk_overlap=100):
